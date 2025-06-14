@@ -1,0 +1,23 @@
+<section class="discounts page__discounts">
+  <h2 class="discounts__heading container">Акции и скидки</h2>
+  <div class="discounts__wrp container">
+    <div class="swiper navSwiper">
+      <div class="swiper-wrapper">
+        {% for card in discount.cards %}
+          <a href="{{ card.url }}" class="discounts__card swiper-slide">
+            <img
+              class="discounts__img"
+              src="{{ card.imgSrc }}"
+              alt="{{ card.name }}"
+            />
+            <p class="discounts__name">{{ card.name }}</p>
+            <div class="discounts__price-wrp">
+              <p class="discounts__price">{{ card.price }}</p>
+              <p class="discounts__price-discount">{{ card.priceDiscount }}</p>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

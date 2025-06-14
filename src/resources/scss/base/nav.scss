@@ -1,0 +1,8 @@
+nav ul {
+  display: flex;
+  list-style: none;
+
+  li:not(:last-child) {
+    padding-right: 15px;
+  }
+}

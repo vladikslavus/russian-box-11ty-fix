@@ -1,0 +1,122 @@
+.page {
+  &__discounts {
+    margin-top: 0;
+  }
+}
+
+.discounts {
+    position: static;
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background: #dadada;
+
+    .container {
+      padding: 0;
+    }
+
+    &__heading {
+      margin-bottom: 24px;
+      font-size: 26px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    &__wrp {
+        display: flex;
+        justify-content: space-between;
+        height: inherit;
+    }
+
+    .swiper {
+      width: 100%;
+      height: inherit;
+      padding: 0 15px;
+      overflow: visible; // Критически важно для Swiper 11+
+    }
+
+    .swiper-wrapper {
+        height: inherit;
+    }
+
+    &__card {
+        position: relative;
+        height: inherit;
+        overflow: hidden;
+        text-decoration: none;
+        border-radius: 4px;
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+        min-height: 225px;
+        box-shadow: 0 0 5px rgb(0 0 0 / 30%);
+    }
+
+    &__name {
+        margin-top: 10px;
+        color: #000;
+        font-size: 18px;
+        font-style: normal;
+        line-height: normal;
+        text-align: center;
+        text-decoration: none;
+        margin-inline: auto;
+    }
+
+    &__price-wrp {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    &__price {
+      font-weight: 900;
+    }
+
+    &__price-discount {
+      margin-left: 10px;
+      text-decoration: line-through;
+      opacity: .5;
+	    text-decoration-color: red;
+    }
+}
+
+// /* Large devices (desktops, 992px and up) */
+@media (width >= 992px) {
+  .discounts {
+    margin-right: 15px;
+    padding-top: 70px;
+    padding-bottom: 60px;
+
+    .container {
+      padding: 0 15px;
+    }
+
+    .swiper {
+      padding: 0;
+    }
+
+    &__heading {
+      text-align: left;
+    }
+  }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (width >= 1200px) {
+  .discounts {
+    &__heading {
+      font-size: 50px;
+    }
+  }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (width >= 1400px) { 
+  .discounts {
+    margin-right: 15px;
+  }
+}

@@ -1,0 +1,51 @@
+stages:
+  - build
+  - test
+  - deploy
+
+.node:
+  image: node:20
+
+  before_script:
+    - '[[ -d node_modules ]] || npm ci --progress=false'
+
+  cache:
+    - key:
+        files:
+          - package-lock.json
+      paths:
+        - node_modules
+
+build:
+  stage: build
+  extends: .node
+  script:
+    - npm run build:sprite
+    - npm run build
+  artifacts:
+    paths:
+      - _site
+    expire_in: 1 day
+
+eslint:
+  extends: .node
+  stage: test
+  script:
+    - npm run lint:eslint
+
+stylelint:
+  extends: .node
+  stage: test
+  script:
+    - npm run lint:stylelint
+
+pages:
+  stage: deploy
+  script:
+    - rm -rf public
+    - cp -r _site public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main

@@ -1,0 +1,74 @@
+{% import "sprite.njk" as sprite %}
+<header class="header">
+  <div class="topbar">
+    <div class="topbar__top">
+      <div class="container topbar__container">
+        <div class="topbar__inner">
+          
+          <a href="/" class="topbar__logo-link">
+            <img
+              src="/images/topbar/logo.svg"
+              alt=""
+              class="topbar__logo-img"
+            />
+          </a>
+
+          <a class="topbar__map-link" href="#">
+            <div class="topbar__map-icon">
+              {{ sprite.svg('main', 'map', 12, 16, '') }}
+            </div>            
+            <span>Москва</span>
+          </a>
+
+          <nav class="topbar__rights">
+            <ul class="topbar__links">
+              <li class="topbar__li">
+                <a href="#" class="topbar__link">О нас</a>
+              </li>
+              <li class="topbar__li">
+                <a href="#" class="topbar__link">Проектирование</a>
+              </li>
+              <li class="topbar__li">
+                <a href="#" class="topbar__link">Лизинг</a>
+              </li>
+              <li class="topbar__li">
+                <a href="#" class="topbar__link">Гарантия</a>
+              </li>
+              <li class="topbar__li">
+                <a href="#" class="topbar__link">Контакты</a>
+              </li>
+            </ul>
+            <div class="topbar__comm">
+              <a href="#" class="topbar__whatsapp-link">{{ sprite.svg('main', 'whatsapp-green', 0, 0, 'topbar__whatsapp-img') }}</a>
+              <a href="#" class="topbar__tel">8 800 123-45-67</a>
+            </div>
+
+            <div class="topbar__catlog">
+              <a href="#catalog" class="topbar__catalog-wrp-link">
+                {{ sprite.svg('main', 'dots-grid', 0, 0, 'topbar__catalog-dots') }}
+                <p class="topbar__catalog-text">Каталог</p>
+              </a>
+  
+              <div class="topbar__search-wrp">
+                <input type="text" class="topbar__search-input" />
+                <button class="topbar__search-btn"></button>
+              </div>
+  
+              <a href="" class="topbar__cart-wrp-link">
+                <span class="topbar__cart-number">0</span>
+              </a>
+              <a href="" class="topbar__heart-wrp-link">
+                <span class="topbar__heart-number">0</span>
+              </a>
+  
+            </div>
+          </nav>
+
+          <div class="topbar__hamburger-wrapper">
+            <div class="topbar__hamburger"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

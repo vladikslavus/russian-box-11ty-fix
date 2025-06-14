@@ -1,0 +1,8 @@
+.idea
+
+node_modules
+_site
+
+public/sprites
+
+# .vscode // оставлю для себя

@@ -1,0 +1,10 @@
+.base-carousel {
+  --swiper-theme-color: var(--primary-color);
+
+  position: relative;
+
+  &__button {
+    background: none;
+    border: none;
+  }
+}
