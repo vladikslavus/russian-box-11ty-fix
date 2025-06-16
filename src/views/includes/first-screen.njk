@@ -1,11 +1,36 @@
 <section class="first-screen">
   <div class="container">
     <div class="first-screen__inner">
-      <img
+      {# <img
         src="images/main/first-screen/main-photo.jpg"
         alt=""
         class="first-screen__bg"
-      />
+      /> #}
+
+      <picture>
+        <img
+          sizes="(max-width: 768px) 100vw, 
+                 (max-width: 1400px) 80vw, 
+                 1320px" 
+          srcset="
+            images/main/first-screen/gen/main-photo_os9qoz_c_scale_w_200.jpg 200w,
+            images/main/first-screen/gen/main-photo_os9qoz_c_scale_w_786.jpg 786w,
+            images/main/first-screen/gen/main-photo_os9qoz_c_scale_w_1167.jpg 1167w,
+            images/main/first-screen/gen/main-photo_os9qoz_c_scale_w_1490.jpg 1490w,
+            images/main/first-screen/gen/main-photo_os9qoz_c_scale_w_1771.jpg 1771w,
+            images/main/first-screen/gen/main-photo_os9qoz_c_scale_w_2005.jpg 2005w,
+            images/main/first-screen/gen/main-photo_os9qoz_c_scale_w_2291.jpg 2291w,
+            images/main/first-screen/gen/main-photo_os9qoz_c_scale_w_2485.jpg 2485w,
+            images/main/first-screen/gen/main-photo_os9qoz_c_scale_w_2640.jpg 2640w"
+          src="images/main/first-screen/gen/main-photo_os9qoz_c_scale_w_1490.jpg"
+          alt="Russian Box"
+          width="1320"
+          height="820"
+          loading="lazy"
+          style="max-width: 100%; height: auto;"
+        >
+      </picture>
+
       <div class="first-screen__title-wrp">
         <h1 class="first-screen__title">
           Оборудование для бизнеса<br>по ценам завода
